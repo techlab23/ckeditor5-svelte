@@ -1,0 +1,52 @@
+{
+  "name": "ckeditor5-svelte",
+  "version": "0.0.1",
+  "description": "Unofficial Svelte.js 3 component for CKEditor 5 – the best browser-based rich text editor.",
+  "homepage": "https://github.com/techlab23/ckeditor5-svelte",
+  "author": "Shirish Nigam <nigamshirish@gmail.com>",
+  "license": "GPL-2.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techlab23/ckeditor5-svelte"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "svelte": "src/CKEditor.svelte",
+  "module": "index.mjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "publish": "np"
+  },
+  "devDependencies": {
+    "lodash-es": "^4.17.14",
+    "np": "^5.0.3",
+    "rollup": "^1.11.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-svelte": "^5.0.0",
+    "svelte": "^3.0.0"
+  },
+  "keywords": [
+    "wysiwyg",
+    "rich text",
+    "editor",
+    "html",
+    "contentEditable",
+    "editing",
+    "svelte",
+    "svelte.js",
+    "svelte component",
+    "svelte3 component",
+    "ckeditor",
+    "ckeditor5",
+    "ckeditor 5"
+  ],
+  "files": [
+    "src",
+    "CKEditor.mjs",
+    "CKEditor.js"
+  ]
+}

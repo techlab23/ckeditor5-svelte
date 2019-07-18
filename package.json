@@ -13,8 +13,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "svelte": "src/CKEditor.svelte",
-  "module": "index.mjs",
-  "main": "index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"No test specified\"",
     "build": "rollup -c",
@@ -46,7 +46,6 @@
   ],
   "files": [
     "src",
-    "CKEditor.mjs",
-    "CKEditor.js"
+    "dist"
   ]
 }

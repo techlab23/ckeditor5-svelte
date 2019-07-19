@@ -100,14 +100,14 @@ function instance_1($$self, $$props, $$invalidate) {
         // Cache the last editor data. This kind of data is a result of typing,
         // editor command execution, collaborative changes to the document, etc.
         // This data is compared when the component value changes in a 2-way binding.
-        const data = lastEditorData = instance.getData();
-
-        dispatch('input', { data, evt, instance });      };
+        // const data = value = lastEditorData = instance.getData()
+        const data = value = lastEditorData = instance.getData();
+        dispatch('input', { data, evt, instance }); $$invalidate('value', value);
+      };
 
       // Debounce emitting the #input event. When data is huge, instance#getData()
       // takes a lot of time to execute on every single key press and ruins the UX.
-      instance.model.document.on( 'change:data', 
-        debounce( emitInputEvent, INPUT_EVENT_DEBOUNCE_WAIT ));
+      instance.model.document.on( 'change:data', debounce( emitInputEvent, INPUT_EVENT_DEBOUNCE_WAIT ));
 
       instance.editing.view.document.on( 'focus', evt => {
         dispatch('focus',{ evt, instance });

@@ -16,7 +16,6 @@
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"No test specified\"",
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
     "publish": "np"

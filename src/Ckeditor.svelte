@@ -1,6 +1,6 @@
 <script>
   import { onMount, onDestroy, createEventDispatcher } from 'svelte'
-  import { debounce } from 'lodash-es'
+  import debounce from 'just-debounce-it'
   
   // Properties
   export let editor = null
@@ -13,7 +13,7 @@
   let lastEditorData = ''
   let editorElement
 
-  const INPUT_EVENT_DEBOUNCE_WAIT = 300;
+  const INPUT_EVENT_DEBOUNCE_WAIT = 300
   const dispatch = createEventDispatcher()
 
   $: watchValue(value)
@@ -26,7 +26,7 @@
 
 
   onMount( () => {
-
+    
     // If value is passed then add it to config
     if(value) {
       Object.assign(config, {
@@ -72,14 +72,14 @@
         // Cache the last editor data. This kind of data is a result of typing,
         // editor command execution, collaborative changes to the document, etc.
         // This data is compared when the component value changes in a 2-way binding.
-        // const data = value = lastEditorData = instance.getData()
         const data = value = lastEditorData = instance.getData()
         dispatch('input', { data, evt, instance })
       }
 
       // Debounce emitting the #input event. When data is huge, instance#getData()
       // takes a lot of time to execute on every single key press and ruins the UX.
-      instance.model.document.on( 'change:data', debounce( emitInputEvent, INPUT_EVENT_DEBOUNCE_WAIT ))
+      instance.model.document.on( 'change:data', 
+        debounce( emitInputEvent, INPUT_EVENT_DEBOUNCE_WAIT ))
 
       instance.editing.view.document.on( 'focus', evt => {
         dispatch('focus',{ evt, instance })

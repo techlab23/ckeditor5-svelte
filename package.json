@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-svelte",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Svelte3 component for CKEditor5",
   "homepage": "https://github.com/techlab23/ckeditor5-svelte",
   "author": "Shirish Nigam <nigamshirish@gmail.com>",

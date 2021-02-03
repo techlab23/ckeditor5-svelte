@@ -1,18 +1,21 @@
-# CKEditor 5 rich text editor component for Svelte.js 3
+## CKEditor5 editor component for Svelte 3
 
-## How to install package
+This component is a thin wrapper around ckeditor5 document editor.
+Below are the set of instructions to create svelte project, install component and a basic setup with CKEditor DocumentEditor build.
+
+### How to install package
 
 ```bash
 $ npm i ckeditor5-svelte
 ```
 
-## Getting started
+### Getting started
 
-### Create a new svelte project and install dependencies
+#### Create a new svelte project and install dependencies
 
 ```bash
 npx degit sveltejs/template my-svelte-project
-# or download and extract 
+# or download and extract
 cd my-svelte-project
 # to use Typescript run:
 # node scripts/setupTypeScript.js
@@ -20,18 +23,19 @@ cd my-svelte-project
 npm install
 ```
 
-### Install ckeditor5-svelte package
+#### Install ckeditor5-svelte package
 
 ```bash
 npm i ckeditor5-svelte
 ```
-### Install DocumentEditor build of ckeditor
+
+#### Install DocumentEditor build of ckeditor
 
 ```bash
 npm i @ckeditor/ckeditor5-build-decoupled-document
 ```
 
-### Update App.svelte in your project with the following
+#### Update App.svelte in your project with the following
 
 ```js
 <script>
@@ -47,7 +51,7 @@ npm i @ckeditor/ckeditor5-build-decoupled-document
 
   // If needed, custom editor config can be passed through to the component
   // Uncomment the custom editor config if you need to customise the editor.
-  // Note: If you don't pass toolbar object then Document editor will use default set of toolbar items. 
+  // Note: If you don't pass toolbar object then Document editor will use default set of toolbar items.
   let editorConfig = {
     toolbar: {
       items: [
@@ -88,14 +92,8 @@ npm i @ckeditor/ckeditor5-build-decoupled-document
 </main>
 ```
 
-### Run your project
+#### Run your project
 
 ```bash
-npm run dev 
+npm run dev
 ```
-
-
-
-
-
-

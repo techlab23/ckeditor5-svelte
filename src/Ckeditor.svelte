@@ -39,7 +39,7 @@
         // Save the reference to the instance for future use.
         instance = editor;
         // Set initial disabled state.
-        editor.isReadOnly = disabled;
+        if (disabled) editor.enableReadOnlyMode("_editor");
         // Let the world know the editor is ready.
         dispatch("ready", editor);
         setUpEditorEvents();
